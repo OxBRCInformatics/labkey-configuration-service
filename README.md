@@ -1,0 +1,1 @@
+labkey-configuration-service
