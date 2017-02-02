@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<principal xmlns="http://www.lcs.ndm.ox.ac.uk/principals/0.1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.lcs.ndm.ox.ac.uk/principals/0.1.0 file:/Users/ollie/code/bitbucket/labkey-configuration-service/grails-app/assets/principals.xsd">
+ <groups>
+  <labkeyGroup id="4">
+   <name>test</name>
+  </labkeyGroup>
+  <labkeyGroup id="5">
+   <name>dev</name>
+  </labkeyGroup>
+  <labkeyGroup id="6">
+   <name>admin</name>
+  </labkeyGroup>
+  <labkeyGroup id="7">
+   <name>extra</name>
+  </labkeyGroup>
+ </groups>
+ <users >
+  <labkeyUser>
+   <email>oliver.freeman@ndm.ox.ac.uk</email>
+  </labkeyUser>
+ </users>
+</principal>

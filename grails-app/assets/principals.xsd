@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.lcs.ndm.ox.ac.uk/principals/0.1.0"
+    xmlns="http://www.lcs.ndm.ox.ac.uk/principals/0.1.0">
+    <xs:element name="principal">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="principalType">
+                    <xs:attribute name="id" type="xs:long"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="principalType">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="groups" type="groupsType"/>
+            <xs:element minOccurs="0" name="users" type="usersType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="groupsType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="labkeyGroup" type="groupType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="usersType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="labkeyUser" type="userType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="groupType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:long"/>
+    </xs:complexType>
+    <xs:complexType name="userType">
+        <xs:sequence>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element minOccurs="0" name="sendEmail" type="xs:boolean" default="true"/>
+            <!--<xs:element minOccurs="0" name="groups" type="groupsType"/>-->
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:long"/>
+    </xs:complexType>
+</xs:schema>
